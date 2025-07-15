@@ -5,11 +5,15 @@ import cors from 'cors';
 import userLog from './models/signup.js';
 import userSign from './models/signin.js';
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
+import addtocart from './models/AddtoCart.js';
+import cookieParser from 'cookie-parser';
 
 
 const app = express();
 app.use(express.json())
+app.use(cookieParser());
+
 const port = 3000;
 app.use(cors({
   origin: 'http://localhost:5173',
@@ -112,6 +116,7 @@ app.post('/api/data/signin', async (req, res) => {
     res.status(500).json({ message: 'Server error', error: err.message });
   }
 });
+
 
 
 
