@@ -1,0 +1,10 @@
+### Add Item to Cart (POST)
+POST http://localhost:3000/api/data/addtocart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNzUyNTY3NDgzfQ.I_Gi1X7iUR7WkTYReiDxlbRslLc4N40M-eFudKhfc6I
+
+{
+  "productId": "64a8b3c7f5d2a0a1b2345678",  // use valid ObjectId
+  "name": "Blue T-Shirt",                  // required if your schema uses it
+  "quantity": 2
+
+}
